@@ -44,6 +44,28 @@ public class RandomIntArray {
         System.out.println(str);
     }
 
+    /**
+     * 二分法查找
+     * @param arr
+     * @param value
+     * @return
+     */
+    public static int dichotomy(int[] arr,int value){
+        int start = 0,end=arr.length-1;
+        int center,index=-1;
+        while (start-end<1){
+            center=(start+end)/2;
+            if (arr[center]==value){
+                return center;
+            }else if (arr[center]<value){
+                start=center+1;
+            }else {
+                end=center-1;
+            }
+        }
+        return index;
+    }
+
     public static void main(String[] args) {
         int[] ints = RandomIntArray.getArray(0,20,100);
         RandomIntArray.display(ints);

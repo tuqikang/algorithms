@@ -2,6 +2,8 @@ package sort;
 
 import utils.RandomIntArray;
 
+import java.util.Scanner;
+
 /**
  * ___________ ________     ____  __.
  * \__    ___/ \_____  \   |    |/ _|
@@ -23,15 +25,18 @@ public class InsertionSort {
             for (j = i; j > 0 && arr[j - 1] > temp; j--) {
                 arr[j] = arr[j - 1];
             }
-            arr[j]=temp;
+            arr[j] = temp;
+            RandomIntArray.display(arr);
         }
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArray(0,1000,300);
+        int[] arr = RandomIntArray.getArray(0, 100, 10);
         RandomIntArray.display(arr);
         InsertionSort.insertionSort(arr);
         RandomIntArray.display(arr);
+        Scanner in = new Scanner(System.in);
+        System.out.println(RandomIntArray.dichotomy(arr, in.nextInt()));
     }
 }
