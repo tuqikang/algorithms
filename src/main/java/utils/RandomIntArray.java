@@ -16,6 +16,7 @@ public class RandomIntArray {
 
     /**
      * [start,end) size个int类型的数组
+     *
      * @param start
      * @param end
      * @param size
@@ -25,49 +26,60 @@ public class RandomIntArray {
         Random random = new Random();
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
-            arr[i]=start+random.nextInt(end);
+            arr[i] = start + random.nextInt(end);
         }
         return arr;
     }
 
     /**
+     * 交换数组上两个位置的值
+     *
+     * @param arr
+     * @param var1
+     * @param var2
+     */
+    public static void swap(int[] arr, int var1, int var2) {
+        int temp = arr[var1];
+        arr[var1] = arr[var2];
+        arr[var2] = temp;
+    }
+
+    /**
      * 显示
+     *
      * @param arr
      */
-    public static void display(int[] arr){
+    public static void display(int[] arr) {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < arr.length; i++) {
             sb.append(arr[i]).append(",");
         }
-        String str = sb.substring(0,sb.length()-1);
-        str = str+"]";
+        String str = sb.substring(0, sb.length() - 1);
+        str = str + "]";
         System.out.println(str);
     }
 
     /**
      * 二分法查找
+     *
      * @param arr
      * @param value
      * @return
      */
-    public static int dichotomy(int[] arr,int value){
-        int start = 0,end=arr.length-1;
-        int center,index=-1;
-        while (start-end<1){
-            center=(start+end)/2;
-            if (arr[center]==value){
+    public static int dichotomy(int[] arr, int value) {
+        int start = 0, end = arr.length - 1;
+        int center, index = -1;
+        while (start - end < 1) {
+            center = (start + end) / 2;
+            if (arr[center] == value) {
                 return center;
-            }else if (arr[center]<value){
-                start=center+1;
-            }else {
-                end=center-1;
+            } else if (arr[center] < value) {
+                start = center + 1;
+            } else {
+                end = center - 1;
             }
         }
         return index;
     }
-
-    public static void main(String[] args) {
-        int[] ints = RandomIntArray.getArray(0,20,100);
-        RandomIntArray.display(ints);
-    }
+    
 }
