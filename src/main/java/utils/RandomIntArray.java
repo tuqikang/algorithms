@@ -32,6 +32,26 @@ public class RandomIntArray {
     }
 
     /**
+     * 一个几乎有序的数组
+     *
+     * @param start
+     * @param end
+     * @param size
+     * @return
+     */
+    public static int[] getArraySorted(int start, int end, int size) {
+        Random random = new Random();
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = i;
+        }
+        for (int i = 0; i < 10; i++) {
+            swap(arr, random.nextInt(size), random.nextInt(size));
+        }
+        return arr;
+    }
+
+    /**
      * 交换数组上两个位置的值
      *
      * @param arr
@@ -81,5 +101,5 @@ public class RandomIntArray {
         }
         return index;
     }
-    
+
 }
