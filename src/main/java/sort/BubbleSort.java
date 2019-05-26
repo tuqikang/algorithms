@@ -15,9 +15,9 @@ import utils.RandomIntArray;
  * 平均时间复杂度  最好情况  最坏情况  空间复杂度  排序方式    稳定性
  * O(n^2)       O(n)    O(n^2)    O(1)    In-place    true
  */
-public class BubbleSort {
+public class BubbleSort implements Sort {
 
-//    public static int[] bubbleSort(int[] arr) {
+//    public static int[] sort(int[] arr) {
 //        for (int i = arr.length - 1; i > 0; i--) {
 //            for (int j = 0; j < i; j++) {
 //                if (arr[j] > arr[j + 1]) {
@@ -28,7 +28,8 @@ public class BubbleSort {
 //        return arr;
 //    }
 
-    public static int[] bubbleSort(int[] arr) {
+    @Override
+    public int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             boolean b = true;
             for (int j = 0; j < arr.length - i; j++) {
@@ -44,13 +45,4 @@ public class BubbleSort {
         return arr;
     }
 
-    public static void main(String[] args) {
-        long start = System.currentTimeMillis();
-        int[] arr = RandomIntArray.getArraySorted(0, 100000, 100000);
-        RandomIntArray.display(arr);
-        BubbleSort.bubbleSort(arr);
-        RandomIntArray.display(arr);
-        long end = System.currentTimeMillis();
-        System.out.println("用时:" + (end - start) + "ms");
-    }
 }

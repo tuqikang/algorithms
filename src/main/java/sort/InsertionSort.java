@@ -14,10 +14,12 @@ import java.util.Scanner;
  * @Author: tuqikang
  * @Date: 2019-05-17 19:32
  * 平均时间复杂度  最好情况  最坏情况  空间复杂度  排序方式    稳定性
- *   O(n^2)       O(n)    O(n^2)    O(1)    In-place    true
+ * O(n^2)       O(n)    O(n^2)    O(1)    In-place    true
  */
-public class InsertionSort {
-    public static int[] insertionSort(int[] arr) {
+public class InsertionSort implements Sort {
+
+    @Override
+    public int[] sort(int[] arr) {
         if (arr.length < 2) {
             return arr;
         }
@@ -28,17 +30,8 @@ public class InsertionSort {
                 arr[j] = arr[j - 1];
             }
             arr[j] = temp;
-            RandomIntArray.display(arr);
         }
         return arr;
     }
 
-    public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArray(0, 100, 10);
-        RandomIntArray.display(arr);
-        InsertionSort.insertionSort(arr);
-        RandomIntArray.display(arr);
-        Scanner in = new Scanner(System.in);
-        System.out.println(RandomIntArray.dichotomy(arr, in.nextInt()));
-    }
 }

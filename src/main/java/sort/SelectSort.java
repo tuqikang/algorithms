@@ -13,11 +13,12 @@ import utils.RandomIntArray;
  * @Date: 2019-05-20 20:34
  * 选择排序
  * 平均时间复杂度  最好情况  最坏情况  空间复杂度  排序方式    稳定性
- *   O(n^2)     O(n^2)    O(n^2)    O(1)    In-place    false
+ * O(n^2)     O(n^2)    O(n^2)    O(1)    In-place    false
  */
-public class SelectSort {
+public class SelectSort implements Sort {
 
-    public static int[] selectSort(int[] arr) {
+    @Override
+    public int[] sort(int[] arr) {
 
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
@@ -31,10 +32,4 @@ public class SelectSort {
         return arr;
     }
 
-    public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArray(0, 1000, 200);
-        RandomIntArray.display(arr);
-        SelectSort.selectSort(arr);
-        RandomIntArray.display(arr);
-    }
 }
