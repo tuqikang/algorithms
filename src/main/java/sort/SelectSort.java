@@ -18,7 +18,7 @@ import utils.RandomIntArray;
 public class SelectSort implements Sort {
 
     @Override
-    public int[] sort(int[] arr) {
+    public void sort(int[] arr) {
 
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
@@ -29,7 +29,6 @@ public class SelectSort implements Sort {
             }
             RandomIntArray.swap(arr, min, i);
         }
-        return arr;
     }
 
 }

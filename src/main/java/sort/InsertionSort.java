@@ -19,9 +19,9 @@ import java.util.Scanner;
 public class InsertionSort implements Sort {
 
     @Override
-    public int[] sort(int[] arr) {
+    public void sort(int[] arr) {
         if (arr.length < 2) {
-            return arr;
+            return;
         }
         int j;
         for (int i = 1; i < arr.length; i++) {
@@ -31,7 +31,6 @@ public class InsertionSort implements Sort {
             }
             arr[j] = temp;
         }
-        return arr;
     }
 
 }

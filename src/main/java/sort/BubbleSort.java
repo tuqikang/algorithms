@@ -29,7 +29,7 @@ public class BubbleSort implements Sort {
 //    }
 
     @Override
-    public int[] sort(int[] arr) {
+    public void sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             boolean b = true;
             for (int j = 0; j < arr.length - i; j++) {
@@ -42,7 +42,6 @@ public class BubbleSort implements Sort {
                 break;
             }
         }
-        return arr;
     }
 
 }

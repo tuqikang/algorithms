@@ -12,7 +12,7 @@ package sort;
  */
 public interface Sort {
 
-    int[] sort(int[] arr);
+    void sort(int[] arr);
 
     default long action(int[] arr) {
         long start = System.currentTimeMillis();
