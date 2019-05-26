@@ -13,6 +13,8 @@ import java.util.Scanner;
  *
  * @Author: tuqikang
  * @Date: 2019-05-17 19:32
+ * 平均时间复杂度  最好情况  最坏情况  空间复杂度  排序方式    稳定性
+ *   O(n^2)       O(n)    O(n^2)    O(1)    In-place    true
  */
 public class InsertionSort {
     public static int[] insertionSort(int[] arr) {
