@@ -9,6 +9,7 @@ package sort;
  *
  * @Author: tuqikang
  * @Date: 2019-05-26 22:15
+ * 希尔排序
  * 平均时间复杂度   最好情况       最坏情况    空间复杂度  排序方式    稳定性
  * O(nlogn)     O(nlog^2n)    O(nlog^2n)    O(1)    In-place    false
  */
