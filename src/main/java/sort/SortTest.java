@@ -15,11 +15,12 @@ import utils.RandomIntArray;
 public class SortTest {
 
     public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArraySorted(0, 100000, 10000);
+        int[] arr = RandomIntArray.getArray(0, 100000, 100000);
         RandomIntArray.display(arr);
 //        Sort sort = new BubbleSort();
 //        Sort sort = new SelectSort();
-        Sort sort = new InsertionSort();
+//        Sort sort = new MergeSort();
+        Sort sort = new ShellSort();
         long time = sort.action(arr);
         RandomIntArray.display(arr);
         System.out.println("耗时：" + time + "ms");
