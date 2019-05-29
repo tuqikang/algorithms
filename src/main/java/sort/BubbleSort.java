@@ -1,6 +1,6 @@
 package sort;
 
-import utils.RandomIntArray;
+import utils.ArrayUtils;
 
 /**
  * ___________ ________     ____  __.
@@ -21,7 +21,7 @@ public class BubbleSort implements Sort {
 //        for (int i = arr.length - 1; i > 0; i--) {
 //            for (int j = 0; j < i; j++) {
 //                if (arr[j] > arr[j + 1]) {
-//                    RandomIntArray.swap(arr, j, j + 1);
+//                    ArrayUtils.swap(arr, j, j + 1);
 //                }
 //            }
 //        }
@@ -34,7 +34,7 @@ public class BubbleSort implements Sort {
             boolean b = true;
             for (int j = 0; j < arr.length - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    RandomIntArray.swap(arr, j, j + 1);
+                    ArrayUtils.swap(arr, j, j + 1);
                     b = false;
                 }
             }

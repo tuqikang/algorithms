@@ -12,7 +12,7 @@ import java.util.Random;
  * @Author: tuqikang
  * @Date: 2019-05-17 19:37
  */
-public class RandomIntArray {
+public class ArrayUtils {
 
     /**
      * [start,end) size个int类型的数组

@@ -1,9 +1,5 @@
 package sort;
 
-import utils.RandomIntArray;
-
-import java.util.Scanner;
-
 /**
  * ___________ ________     ____  __.
  * \__    ___/ \_____  \   |    |/ _|

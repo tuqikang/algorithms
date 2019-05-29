@@ -1,6 +1,6 @@
 package sort;
 
-import utils.RandomIntArray;
+import utils.ArrayUtils;
 
 /**
  * ___________ ________     ____  __.
@@ -15,14 +15,15 @@ import utils.RandomIntArray;
 public class SortTest {
 
     public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArray(0, 100000, 100000);
-        RandomIntArray.display(arr);
+        int[] arr = ArrayUtils.getArray(0, 100000, 10000);
+        ArrayUtils.display(arr);
 //        Sort sort = new BubbleSort();
 //        Sort sort = new SelectSort();
 //        Sort sort = new MergeSort();
-        Sort sort = new ShellSort();
+//        Sort sort = new ShellSort();
+        Sort sort = new QuickSort();
         long time = sort.action(arr);
-        RandomIntArray.display(arr);
+        ArrayUtils.display(arr);
         System.out.println("耗时：" + time + "ms");
     }
 }

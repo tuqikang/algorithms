@@ -1,6 +1,6 @@
 package offer;
 
-import utils.RandomIntArray;
+import utils.ArrayUtils;
 
 /**
  * ___________ ________     ____  __.
@@ -20,15 +20,15 @@ import utils.RandomIntArray;
  */
 public class Three {
     public static void main(String[] args) {
-        int[] arr = RandomIntArray.getArray(0, 10, 10);
-        RandomIntArray.display(arr);
+        int[] arr = ArrayUtils.getArray(0, 10, 10);
+        ArrayUtils.display(arr);
         for (int index = 0; index < arr.length; index++) {
             while (index!=arr[index]){
                 if (arr[index]==arr[arr[index]]){
                     System.out.println(arr[index]);
                     return;
                 }
-                RandomIntArray.swap(arr,index,arr[index]);
+                ArrayUtils.swap(arr,index,arr[index]);
             }
         }
         System.out.println("无");

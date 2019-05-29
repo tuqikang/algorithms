@@ -1,6 +1,6 @@
 package sort;
 
-import utils.RandomIntArray;
+import utils.ArrayUtils;
 
 /**
  * ___________ ________     ____  __.
@@ -27,7 +27,7 @@ public class SelectSort implements Sort {
                     min = j;
                 }
             }
-            RandomIntArray.swap(arr, min, i);
+            ArrayUtils.swap(arr, min, i);
         }
     }
 
