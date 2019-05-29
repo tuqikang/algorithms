@@ -15,7 +15,7 @@ import utils.ArrayUtils;
 public class SortTest {
 
     public static void main(String[] args) {
-        int[] arr = ArrayUtils.getArray(0, 100000, 10000);
+        int[] arr = ArrayUtils.getArray(0, 100000, 100000);
         ArrayUtils.display(arr);
 //        Sort sort = new BubbleSort();
 //        Sort sort = new SelectSort();
