@@ -13,6 +13,8 @@ import java.util.Random;
  *
  * @Author: tuqikang
  * @Date: 2019-05-29 09:59
+ * 平均时间复杂度  最好情况    最坏情况  空间复杂度  排序方式    稳定性
+ *   O(nlogn)   O(nlogn)    O(n^2)   O(logn)    In-place   false
  */
 public class QuickSort implements Sort {
     @Override
@@ -23,7 +25,7 @@ public class QuickSort implements Sort {
     private void quickSort(int[] arr, int left, int right) {
         if (left < right) {
             int index = quick(arr, left, right);
-            quickSort(arr, left, index);
+            quickSort(arr, left, index-1);
             quickSort(arr, index + 1, right);
         }
     }
@@ -35,7 +37,7 @@ public class QuickSort implements Sort {
         int temp = arr[left];
         int l = left + 1;
         int r = right;
-        while (l <= right) {
+        while (l < right) {
             while (temp > arr[l] && l < right) {
                 l++;
             }
