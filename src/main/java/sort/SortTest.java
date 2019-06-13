@@ -21,7 +21,8 @@ public class SortTest {
 //        Sort sort = new SelectSort();
 //        Sort sort = new MergeSort();
 //        Sort sort = new ShellSort();
-        Sort sort = new QuickSort();
+//        Sort sort = new QuickSort();
+        Sort sort = new HeapSort();
         long time = sort.action(arr);
         ArrayUtils.display(arr);
         System.out.println("耗时：" + time + "ms");
