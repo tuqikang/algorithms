@@ -32,5 +32,8 @@ public class BSTTest {
         if(bst.contains(4)){
             System.out.println(4+"存在");
         }
+        bst.inOrder();
+        bst.postOrder();
+        bst.levelOrder();
     }
 }
