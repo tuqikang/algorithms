@@ -41,4 +41,9 @@ public class DetectCycle {
         }
         return head;
     }
+
+    public static void main(String[] args) {
+        Node node = detectCycle(LinkUtils.getCircle());
+        System.out.println(node.e);
+    }
 }

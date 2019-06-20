@@ -1,5 +1,7 @@
 package data.structure.link.quick_slow;
 
+import java.util.Random;
+
 /**
  * █████▒█      ██  ▄████▄   ██ ▄█▀       ██████╗ ██╗   ██╗ ██████╗
  * ▓██   ▒ ██  ▓██▒▒██▀ ▀█   ██▄█▒        ██╔══██╗██║   ██║██╔════╝
@@ -20,9 +22,11 @@ package data.structure.link.quick_slow;
 public class LinkUtils {
 
     public static Node<Integer> getNonCircle() {
+        Random random = new Random();
+        int flag = random.nextInt(20) + 10;
         Node<Integer> node = new Node<>(0);
         Node head = node;
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < flag; i++) {
             node.next = new Node<>(i);
             node = node.next;
         }
@@ -30,15 +34,22 @@ public class LinkUtils {
     }
 
     public static Node<Integer> getCircle() {
+        Random random = new Random();
+        int flag = 10 + random.nextInt(20);
+        System.out.println("生成" + flag + "个节点的链表");
         Node<Integer> node = new Node<>(0);
         Node head = node;
-        for (int i = 1; i < 8; i++) {
+        Node entry = null;
+        int index = 1 + random.nextInt(flag - 1);
+        for (int i = 1; i < flag; i++) {
             node.next = new Node<>(i);
+            if (i == index) {
+                entry = node;
+            }
             node = node.next;
         }
-        Node flag = new Node(100);
-        node.next = flag;
-        flag.next = node;
+        System.out.println("链环切入点的值为" + entry.e);
+        node.next = entry;
         return head;
     }
 }
