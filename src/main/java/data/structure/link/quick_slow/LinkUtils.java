@@ -23,11 +23,13 @@ public class LinkUtils {
 
     /**
      * 生成无环链表
+     *
      * @return
      */
     public static Node<Integer> getNonCircle() {
         Random random = new Random();
         int flag = random.nextInt(20) + 10;
+        System.out.println("生成" + flag + "个节点");
         Node<Integer> node = new Node<>(0);
         Node head = node;
         for (int i = 1; i < flag; i++) {
@@ -39,6 +41,7 @@ public class LinkUtils {
 
     /**
      * 生成有环链表
+     *
      * @return
      */
     public static Node<Integer> getCircle() {
