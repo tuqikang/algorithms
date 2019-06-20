@@ -21,6 +21,10 @@ import java.util.Random;
  */
 public class LinkUtils {
 
+    /**
+     * 生成无环链表
+     * @return
+     */
     public static Node<Integer> getNonCircle() {
         Random random = new Random();
         int flag = random.nextInt(20) + 10;
@@ -33,6 +37,10 @@ public class LinkUtils {
         return head;
     }
 
+    /**
+     * 生成有环链表
+     * @return
+     */
     public static Node<Integer> getCircle() {
         Random random = new Random();
         int flag = 10 + random.nextInt(20);
