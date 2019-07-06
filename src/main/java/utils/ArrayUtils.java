@@ -90,7 +90,7 @@ public class ArrayUtils {
         int start = 0, end = arr.length - 1;
         int center, index = -1;
         while (start - end < 1) {
-            center = (start + end) / 2;
+            center = start + ((end - start) >>> 1);
             if (arr[center] == value) {
                 return center;
             } else if (arr[center] < value) {
