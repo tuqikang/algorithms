@@ -88,7 +88,7 @@ public class ArrayUtils {
      */
     public static int dichotomy(int[] arr, int value) {
         int start = 0, end = arr.length - 1;
-        int center, index = -1;
+        int center;
         while (start - end < 1) {
             center = start + ((end - start) >>> 1);
             if (arr[center] == value) {
@@ -99,7 +99,7 @@ public class ArrayUtils {
                 end = center - 1;
             }
         }
-        return index;
+        return -1;
     }
 
 }
