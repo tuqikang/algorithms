@@ -128,6 +128,31 @@ public class RBT<T extends Comparable<T>> {
         }
     }
 
+    /**
+     * 右旋
+     *
+     * @param node
+     */
+    public void rotateRight(RBTreeNode<T> node) {
+        if (node != null) {
+            RBTreeNode<T> l = node.left;
+            node.left = l.right;
+            if (l.right != null) {
+                l.right.parent = node;
+            }
+            l.parent = node.parent;
+            if (node.parent == null) {
+                this.root = l;
+            } else if (node.parent.left == node) {
+                node.parent.left = l;
+            } else {
+                node.parent.right = l;
+            }
+            l.right = node;
+            node.parent = l;
+        }
+    }
+
 
     /**
      * find the parent node to hold node x,if parent value equals x.value return parent.
